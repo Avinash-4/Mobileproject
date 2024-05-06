@@ -1,38 +1,47 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { useState } from "react";
 import "./App.css";
-import MyButton from "./components/button";
-// import { Router, Route } from "express";
-import button from "./components/button";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Button } from "@mui/base";
+import TitleBar from "./components/TitleBar/TitleBar";
+import Services from "./components/Services/Services";
+import About from "./components/About/About";
+import Home from "./components/Home/Home";
+import Blog from "./components/Blog/Bolg";
+import Content from "./components/Content/Content";
+import Login from "./components/Login/Login";
 
 function App() {
+  const [selectedTab, setSelectedTab] = useState(0);
+
+  const handleTabChange = (tabIndex: number) => {
+    setSelectedTab(tabIndex);
+  };
+
+  let tabContent;
+  switch (selectedTab) {
+    case 0:
+      tabContent = <Home />;
+      break;
+    case 1:
+      tabContent = <Services />;
+      break;
+    case 2:
+      tabContent = <About />;
+      break;
+    case 3:
+      tabContent = <Content />;
+      break;
+    case 4:
+      tabContent = <Blog />;
+      break;
+    case 5:
+      tabContent = <Login />;
+      break;
+    default:
+      tabContent = <Home />;
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Welcome to Your Hospital</h1>
-        <MyButton label="Click me" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        {/* <Router>
-          <Routes>
-            <Route element={<Button />}>
-              <Route path="/components" element={<Button />} />
-            </Route>
-          </Routes>
-        </Router> */}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TitleBar onTabChange={handleTabChange} />
+      {tabContent}
     </div>
   );
 }
