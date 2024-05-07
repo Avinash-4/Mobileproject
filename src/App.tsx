@@ -42,6 +42,7 @@ function App() {
     <div>
       <TitleBar onTabChange={handleTabChange} />
       {tabContent}
+      {/* <HeroSection /> */}
     </div>
   );
 }

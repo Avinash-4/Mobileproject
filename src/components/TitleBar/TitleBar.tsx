@@ -21,6 +21,7 @@ import {
 } from "@mui/material";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
+import logo2 from "../Images/logo2.png";
 import { Home } from "@mui/icons-material";
 import About from "../About/About";
 import Services from "../Services/Services";
@@ -61,7 +62,7 @@ const TitleBar: React.FC<TitleBarProps> = ({ onTabChange }) => {
           </Grid>
           <Grid item>
             <Typography variant="subtitle1" sx={{ display: "inline-block" }}>
-              example@example.com
+              avinashcm11@gmail.com
             </Typography>
           </Grid>
           <Grid item>
@@ -76,7 +77,7 @@ const TitleBar: React.FC<TitleBarProps> = ({ onTabChange }) => {
           </Grid>
           <Grid item>
             <Typography variant="subtitle1" sx={{ display: "inline-block" }}>
-              +1234567890
+              +1 (816) 895-2829
             </Typography>
           </Grid>
         </Grid>
@@ -84,8 +85,23 @@ const TitleBar: React.FC<TitleBarProps> = ({ onTabChange }) => {
           <IconButton edge="start" color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            ConnectWave
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              flexGrow: 1,
+              display: "flex",
+              flexDirection: "column",
+              paddingLeft: "10px",
+              //alignItems: "center",
+            }}
+          >
+            <img
+              src={logo2}
+              alt="Logo2"
+              style={{ width: "200px", height: "70px" }}
+            />
+            <div style={{ marginLeft: "40px" }}>ConnectWave</div>
           </Typography>
           <Button
             variant="contained"

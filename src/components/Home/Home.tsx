@@ -1,8 +1,15 @@
 // Home.tsx
 import React from "react";
+import HeroSection from "./HeroSection";
+import InfoPage from "./InfoPage";
 
 const Home: React.FC = () => {
-  return <div>Home Page Content</div>;
+  return (
+    <div>
+      <HeroSection />
+      <InfoPage />
+    </div>
+  );
 };
 
 export default Home;
