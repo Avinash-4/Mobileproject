@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 
 const HeroSection = () => {

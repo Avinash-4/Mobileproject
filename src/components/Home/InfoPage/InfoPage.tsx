@@ -1,7 +1,7 @@
 import React from "react";
 import "./InfoPage.css";
 import { FaClock, FaHeadset, FaHouseUser } from "react-icons/fa";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 
 const InfoPage = () => {
